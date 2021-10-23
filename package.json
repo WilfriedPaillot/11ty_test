@@ -1,0 +1,27 @@
+{
+  "name": "11ty",
+  "version": "1.0.0",
+  "description": "Firsts steps with Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilfriedPaillot/11ty_test.git"
+  },
+  "keywords": [
+    "11ty",
+    "Eleventy"
+  ],
+  "author": "Wilfried Paillot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilfriedPaillot/11ty_test/issues"
+  },
+  "homepage": "https://github.com/WilfriedPaillot/11ty_test#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
