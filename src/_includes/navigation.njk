@@ -1,9 +1,10 @@
-{{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
-    listElement: "ul",
-    listItemElement: "li",
-    listClass: "navbar-nav",
-    listItemClass: "nav-item",
-    anchorClass: "nav-link",
-    activeAnchorClass: "active",
-    activeKey: eleventyNavigation.key
-}) | safe }}
+{% set navPages = collections.all | eleventyNavigation %}
+<div class="container-fluid">
+    <ul class="navbar-nav">
+    {%- for item in navPages %}
+        <li class="nav-item">
+            <a href="{{ item.url | url }}" class="nav-link{% if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
+        </li>
+    {%- endfor %}
+    </ul>
+</div>
