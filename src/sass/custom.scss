@@ -1,3 +1,36 @@
-* {
-    color: rebeccapurple;
-}
+// Required elements loaded for override
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Here, i can...
+
+    //declare some custom color variables
+    $imperial-red: rgba(229, 56, 59, 1);
+    $silver-chalice: rgba(177, 167, 166, 1);
+    $cultured: rgba(245, 243, 244, 1);
+
+    //create custom colors map for merge and add in :root
+    $new-colors: (
+    "imperial-red": $imperial-red,
+    "silver-chalice": $silver-chalice,
+    "cultured": $cultured
+    );
+
+    $theme-colors: map-merge($theme-colors, $new-colors);
+
+    // Activate unable options
+    $enable-negative-margins: true;
+
+    // override BS defaults fonts and styles of variables
+        $navbar-dark-color:                 $silver-chalice;
+        $navbar-dark-hover-color:           $imperial-red;
+        $navbar-dark-active-color:          $cultured;
+        // Change default font family
+        $font-family-sans-serif: 'Merriweather', serif;
+
+// Finish by add all BS natives and overriden styles on my custom.css
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Special+Elite&display=swap');
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+

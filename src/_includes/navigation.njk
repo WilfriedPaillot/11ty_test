@@ -1,10 +1,19 @@
 {% set navPages = collections.all | eleventyNavigation %}
-<div class="container-fluid">
-    <ul class="navbar-nav">
-    {%- for item in navPages %}
-        <li class="nav-item">
-            <a href="{{ item.url | url }}" class="nav-link{% if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
-        </li>
-    {%- endfor %}
-    </ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">11ty_test</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+            {%- for item in navPages %}
+                <li class="nav-item">
+                    <a href="{{ item.url | url }}" class="nav-link{% if item.url == page.url %} active{% endif %}">{{ item.title }}</a>
+                </li>
+            {%- endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

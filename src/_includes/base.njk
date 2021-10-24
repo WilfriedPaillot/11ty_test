@@ -16,10 +16,14 @@
     {% for item in site.meta_prop %}
         <meta property="{{ item.property }}" content="{{ item.content }}"> 
     {% endfor %}
-    <link rel="stylesheet" href="{{ 'assets/css/custom.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | url }}">
 </head>
 <body>
-    {% include "navigation.njk" %}
+    <header>
+        {% include "navigation.njk" %}
+    </header>
+
     {{ content | safe }}
+    
 </body>
 </html>
