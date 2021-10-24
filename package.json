@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/WilfriedPaillot/11ty_test#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
-  }
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.3.2"
+  },
+  "devDependencies": {}
 }

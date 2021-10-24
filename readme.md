@@ -20,4 +20,12 @@ Add _includes folder for templates
 Add an another standard folder _data in src
 - Create site.json with title and descrition data
 
-Modifying base.njk to add conditionnals features for title and meta description 
+Modifying base.njk to add conditionnals features for title and meta description
+
+---
+
+Install navigation plugin
+```bash
+npm install @11ty/eleventy-navigation --save-dev
+```
+Add variable and declaration in .eleventy.js
