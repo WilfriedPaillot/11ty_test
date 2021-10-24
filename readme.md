@@ -26,6 +26,20 @@ Modifying base.njk to add conditionnals features for title and meta description
 
 Install navigation plugin
 ```bash
-npm install @11ty/eleventy-navigation --save-dev
+npm install @11ty/eleventy-navigation
 ```
 Add variable and declaration in .eleventy.js
+
+---
+
+Install bootstrap 
+```bash
+npm i bootstrap -D
+npm i sass
+npm i npm-run-all
+```
+Add addWatchTarget function to watch modification
+    eleventyConfig.addWatchTarget("./src/sass/");
+    Update base template with link:css
+    Update scripts 
+
