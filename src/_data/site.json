@@ -1,4 +1,35 @@
 {
     "title": "site_Title",
-    "description": "site_Description"
+    "meta_name": [
+        {
+            "name": "description",
+            "content": "site_Description"
+        },
+        {
+            "name": "robots",
+            "content": "index, follow"
+        }
+    ],
+    "meta_prop": [
+        {
+            "property": "og:type",
+            "content": "Website"
+        },
+        {
+            "property": "og:title",
+            "content": "titre og"
+        },
+        {
+            "property": "og:url",
+            "content": "url du site"
+        },
+        {
+            "property": "og:image",
+            "content": "url de logo"
+        },
+        {
+            "property": "og:description",
+            "content": "Description du site"
+        }
+    ]
 }
